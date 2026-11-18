@@ -27,7 +27,10 @@ body.single .side,body.single .mbtn,body.single .nav{display:none!important}
 #bgfx.page{position:fixed;left:0;right:0;top:0;height:var(--bgh);z-index:0}
 #bgfx[hidden]{display:none}
 
-.side{overflow-y:auto;padding:12px}
+.side{display:flex;flex-direction:column;overflow:hidden;padding:12px}
+.side .portrait,.side .name{flex:none}
+.side .portrait{max-height:42vh}
+#list-p,#list-m{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-bottom:12px}
 #side-p{--accent:var(--acc-p);--accent-ink:var(--acc-p-ink);background:var(--left-bg)}
 #side-m{--accent:var(--acc-m);--accent-ink:var(--acc-m-ink);background:var(--right-bg)}
 .portrait{aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#dfe2e7;display:flex;align-items:center;justify-content:center;font-size:84px;font-weight:800;color:#fff}
